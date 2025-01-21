@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Autocomplete on My blog</title>
+    <link>https://thetechartguy.com/tags/autocomplete/</link>
+    <description>Recent content in Autocomplete on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 11 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechartguy.com/tags/autocomplete/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PyCharm autocomplete setup for MotionBuilder scripting </title>
+      <link>https://thetechartguy.com/post/pycharm-motionbuilder/</link>
+      <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/post/pycharm-motionbuilder/</guid>
+      
+        <description>&lt;p&gt;PyCharm, a popular Python IDE, can greatly enhance your scripting experience in MotionBuilder. This tutorial will guide you through the process of configuring PyCharm for MotionBuilder scripting, enabling autocompletion feature to streamline your development workflow.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

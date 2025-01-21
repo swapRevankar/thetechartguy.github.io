@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My blog</title>
+    <link>https://thetechartguy.com/</link>
+    <description>Recent content on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 07 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechartguy.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Training a Perceptron on Logical Operators</title>
+      <link>https://thetechartguy.com/post/perceptron-logical-operators/</link>
+      <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/post/perceptron-logical-operators/</guid>
+      
+        <description>&lt;p&gt;One of the fundamental concepts in machine learning domain is the perceptron, an algorithm inspired by the functioning of a neuron. In this blog post, we will explore the intricacies of perceptron, understand how they learn, and delve into the practical aspect of training a perceptron on logical operators.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Mirror Controller Shapes Documentation</title>
+      <link>https://thetechartguy.com/post/mirror-controller-shape/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/post/mirror-controller-shape/</guid>
+      
+        <description>&lt;p&gt;Are you tired of manually repositioning asymmetrical components to match control curves on the opposite side in Maya? Look no further! Mirror Controller Shape is here to simplify your workflow and save you time. With just a few clicks, you can effortlessly mirror control shapes across different axes, ensuring symmetry and consistency in your projects.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>PyCharm autocomplete setup for MotionBuilder scripting </title>
+      <link>https://thetechartguy.com/post/pycharm-motionbuilder/</link>
+      <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/post/pycharm-motionbuilder/</guid>
+      
+        <description>&lt;p&gt;PyCharm, a popular Python IDE, can greatly enhance your scripting experience in MotionBuilder. This tutorial will guide you through the process of configuring PyCharm for MotionBuilder scripting, enabling autocompletion feature to streamline your development workflow.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Duplicate objects along curve</title>
+      <link>https://thetechartguy.com/post/duplicate-along-curve/</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/post/duplicate-along-curve/</guid>
+      
+        <description>&lt;figure class=&#34;big&#34;&gt;&lt;img src=&#34;https://thetechartguy.com/duplicateAlongCurve/duplicate_objects_along_curve_01.png&#34;
+    alt=&#34;image&#34;&gt;&lt;figcaption&gt;
+      &lt;p&gt;beads&lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In this post, I will describe how we can duplicate objects along a curve using Maya Mash.
+For the Dora Milaje model, I had to place the beads on a leather jacket. After a bit of research I came to the conclusion that Maya Mash would be a good way of doing that.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Welcome to my Blog!!</title>
+      <link>https://thetechartguy.com/post/welcome/</link>
+      <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/post/welcome/</guid>
+      
+        <description>&lt;p&gt;After more than a decade of immersing myself in the world of CG and gaming, I have finally made the decision to start my own blog. This space will serve as a platform for my personal growth, allowing me to make incremental changes and improvements every single day. Inspired by the timeless principle that &amp;ldquo;the best way to learn something is to teach it,&amp;rdquo; I aim to share my insights, observations, and experiences with the wider community. Join me on this exciting journey of exploration as I delve into industry trends, machine learning, art, games, characters, rigging, mathematics, and much more.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Awards</title>
+      <link>https://thetechartguy.com/awards/</link>
+      <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/awards/</guid>
+      
+        <description>Hugo Awards, an annual literary award for the best science fiction or fantasy works</description>
+      
+    </item>
+    
+    <item>
+      <title>Certifications</title>
+      <link>https://thetechartguy.com/certifications/</link>
+      <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/certifications/</guid>
+      
+        <description>Hugo Certifications</description>
+      
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://thetechartguy.com/about/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/about/</guid>
+      
+        <description>Swap, Technical Artist</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://thetechartguy.com/archives/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/archives/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://thetechartguy.com/contact/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/contact/</guid>
+      
+        <description>Contact Page</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://thetechartguy.com/imprint/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/imprint/</guid>
+      
+        <description>&lt;h1 id=&#34;legal-disclosure&#34;&gt;Legal Disclosure&lt;/h1&gt;
+&lt;p&gt;Information in accordance with the applicable law&lt;/p&gt;
+&lt;p&gt;Jane Doe&lt;br&gt;
+Anatole Street 10&lt;br&gt;
+2016 GoHugo&lt;br&gt;
+Germany&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

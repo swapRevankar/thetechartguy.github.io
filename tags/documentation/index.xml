@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation on My blog</title>
+    <link>https://thetechartguy.com/tags/documentation/</link>
+    <description>Recent content in Documentation on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 25 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechartguy.com/tags/documentation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mirror Controller Shapes Documentation</title>
+      <link>https://thetechartguy.com/post/mirror-controller-shape/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/post/mirror-controller-shape/</guid>
+      
+        <description>&lt;p&gt;Are you tired of manually repositioning asymmetrical components to match control curves on the opposite side in Maya? Look no further! Mirror Controller Shape is here to simplify your workflow and save you time. With just a few clicks, you can effortlessly mirror control shapes across different axes, ensuring symmetry and consistency in your projects.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>PyCharm autocomplete setup for MotionBuilder scripting </title>
+      <link>https://thetechartguy.com/post/pycharm-motionbuilder/</link>
+      <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/post/pycharm-motionbuilder/</guid>
+      
+        <description>&lt;p&gt;PyCharm, a popular Python IDE, can greatly enhance your scripting experience in MotionBuilder. This tutorial will guide you through the process of configuring PyCharm for MotionBuilder scripting, enabling autocompletion feature to streamline your development workflow.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

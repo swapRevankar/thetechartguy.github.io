@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machinelearning on My blog</title>
+    <link>https://thetechartguy.com/tags/machinelearning/</link>
+    <description>Recent content in Machinelearning on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 07 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechartguy.com/tags/machinelearning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Training a Perceptron on Logical Operators</title>
+      <link>https://thetechartguy.com/post/perceptron-logical-operators/</link>
+      <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/post/perceptron-logical-operators/</guid>
+      
+        <description>&lt;p&gt;One of the fundamental concepts in machine learning domain is the perceptron, an algorithm inspired by the functioning of a neuron. In this blog post, we will explore the intricacies of perceptron, understand how they learn, and delve into the practical aspect of training a perceptron on logical operators.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

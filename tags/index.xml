@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on My blog</title>
+    <link>https://thetechartguy.com/tags/</link>
+    <description>Recent content in Tags on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 07 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechartguy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gamedev</title>
+      <link>https://thetechartguy.com/tags/gamedev/</link>
+      <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/tags/gamedev/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Machinelearning</title>
+      <link>https://thetechartguy.com/tags/machinelearning/</link>
+      <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/tags/machinelearning/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Perceptron</title>
+      <link>https://thetechartguy.com/tags/perceptron/</link>
+      <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/tags/perceptron/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Documentation</title>
+      <link>https://thetechartguy.com/tags/documentation/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/tags/documentation/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Maya</title>
+      <link>https://thetechartguy.com/tags/maya/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/tags/maya/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://thetechartguy.com/tags/python/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/tags/python/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Scripting</title>
+      <link>https://thetechartguy.com/tags/scripting/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/tags/scripting/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Tool</title>
+      <link>https://thetechartguy.com/tags/tool/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/tags/tool/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Autocomplete</title>
+      <link>https://thetechartguy.com/tags/autocomplete/</link>
+      <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/tags/autocomplete/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Pycharm</title>
+      <link>https://thetechartguy.com/tags/pycharm/</link>
+      <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/tags/pycharm/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Mash</title>
+      <link>https://thetechartguy.com/tags/mash/</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/tags/mash/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Modelling</title>
+      <link>https://thetechartguy.com/tags/modelling/</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/tags/modelling/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Personal</title>
+      <link>https://thetechartguy.com/tags/personal/</link>
+      <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/tags/personal/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
