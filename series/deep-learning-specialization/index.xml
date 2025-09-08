@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deep Learning Specialization on My blog</title>
+    <link>https://thetechartguy.com/series/deep-learning-specialization/</link>
+    <description>Recent content in Deep Learning Specialization on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechartguy.com/series/deep-learning-specialization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Math to Code: Logistic Regression in Neural Networks</title>
+      <link>https://thetechartguy.com/post/deep-learning-week1-and-week2/</link>
+      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/post/deep-learning-week1-and-week2/</guid>
+      
+        <description>&lt;p&gt;I’m currently taking &lt;strong&gt;Neural Networks and Deep Learning&lt;/strong&gt; (part of the &lt;a href=&#34;https://www.coursera.org/specializations/deep-learning&#34;&gt;Deep Learning Specialization on Coursera&lt;/a&gt;).&lt;br&gt;
+One of the first building blocks we meet is &lt;strong&gt;logistic regression&lt;/strong&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

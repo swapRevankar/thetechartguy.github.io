@@ -3,7 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://thetechartguy.com/</loc>
-    <lastmod>2024-01-07T00:00:00+00:00</lastmod>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thetechartguy.com/tags/coursera/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thetechartguy.com/series/deep-learning-specialization/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thetechartguy.com/tags/deeplearning/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thetechartguy.com/post/deep-learning-week1-and-week2/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thetechartguy.com/post/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thetechartguy.com/series/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thetechartguy.com/tags/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thetechartguy.com/tags/gamedev/</loc>
     <lastmod>2024-01-07T00:00:00+00:00</lastmod>
@@ -12,12 +33,6 @@
     <lastmod>2024-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thetechartguy.com/tags/perceptron/</loc>
-    <lastmod>2024-01-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thetechartguy.com/post/</loc>
-    <lastmod>2024-01-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thetechartguy.com/tags/</loc>
     <lastmod>2024-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thetechartguy.com/post/perceptron-logical-operators/</loc>
@@ -85,7 +100,5 @@
     <loc>https://thetechartguy.com/categories/</loc>
   </url><url>
     <loc>https://thetechartguy.com/portfolio/</loc>
-  </url><url>
-    <loc>https://thetechartguy.com/series/</loc>
   </url>
 </urlset>

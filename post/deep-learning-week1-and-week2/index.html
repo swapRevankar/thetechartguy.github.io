@@ -1,0 +1,693 @@
+<!doctype html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <meta charset="utf-8" />
+  <title>
+    
+      
+        From Math to Code: Logistic Regression in Neural Networks |
+      Swapnil Revankar
+
+  </title>
+
+  <meta name="generator" content="Hugo 0.140.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Swapnil Revankar" />
+  <meta
+    name="description"
+    content="Bridging Art and Code"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.8d4fad7e6916ad2e291e8d97ada157c70350d6d7150fea137e7243340967befb.css"
+      integrity="sha256-jU&#43;tfmkWrS4pHo2XraFXxwNQ1tcVD&#43;oTfnJDNAlnvvs="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.10cb17328b3207590ce3d89fb482e7cd6937d8138cef2059c69cabd65ab7d6c6.css"
+    integrity="sha256-EMsXMosyB1kM49iftILnzWk32BOM7yBZxpyr1lq31sY="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.7aa4d559d5fadcfed666b5679be54d0dbbcf6a0542742319765b253d2797cc44.css"
+    integrity="sha256-eqTVWdX63P7WZrVnm&#43;VNDbvPagVCdCMZdlslPSeXzEQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a699c3ab02229020e2d51dfe6c9a4cc556fd7781edbc166e2af9d0db9d5c66ce.css"
+    integrity="sha256-ppnDqwIikCDi1R3&#43;bJpMxVb9d4HtvBZuKvnQ251cZs4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.1d88b60c86c4bb253fa4d4c085d27f7ee1f6eca544f7b50b227a2e63fbcfbaaa.css"
+    integrity="sha256-HYi2DIbEuyU/pNTAhdJ/fuH27KVE97ULInouY/vPuqo="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://thetechartguy.com/post/deep-learning-week1-and-week2/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+  
+
+
+  
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://thetechartguy.com/images/site-feature-image.png">
+  <meta name="twitter:title" content="From Math to Code: Logistic Regression in Neural Networks">
+  <meta name="twitter:description" content="I’m currently taking Neural Networks and Deep Learning (part of the Deep Learning Specialization on Coursera).
+One of the first building blocks we meet is logistic regression.">
+
+
+
+  
+  <meta property="og:url" content="https://thetechartguy.com/post/deep-learning-week1-and-week2/">
+  <meta property="og:site_name" content="My blog">
+  <meta property="og:title" content="From Math to Code: Logistic Regression in Neural Networks">
+  <meta property="og:description" content="I’m currently taking Neural Networks and Deep Learning (part of the Deep Learning Specialization on Coursera).
+One of the first building blocks we meet is logistic regression.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2025-09-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-09-07T00:00:00+00:00">
+    <meta property="article:tag" content="Coursera">
+    <meta property="article:tag" content="Deeplearning">
+    <meta property="og:image" content="https://thetechartguy.com/images/site-feature-image.png">
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "From Math to Code: Logistic Regression in Neural Networks",
+        "headline": "From Math to Code: Logistic Regression in Neural Networks",
+        "alternativeHeadline": "",
+        "description": "
+      
+        \u003cp\u003eI’m currently taking \u003cstrong\u003eNeural Networks and Deep Learning\u003c\/strong\u003e (part of the \u003ca href=\u0022https:\/\/www.coursera.org\/specializations\/deep-learning\u0022\u003eDeep Learning Specialization on Coursera\u003c\/a\u003e).\u003cbr\u003e\nOne of the first building blocks we meet is \u003cstrong\u003elogistic regression\u003c\/strong\u003e.\u003c\/p\u003e
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/thetechartguy.com\/post\/deep-learning-week1-and-week2\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Swapnil Revankar"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Swapnil Revankar"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Swapnil Revankar"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Swapnil Revankar"
+        },
+        "copyrightYear" : "2025",
+        "dateCreated": "2025-09-07T00:00:00.00Z",
+        "datePublished": "2025-09-07T00:00:00.00Z",
+        "dateModified": "2025-09-07T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Swapnil Revankar",
+            "url": "https://thetechartguy.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/thetechartguy.com\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://thetechartguy.com/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/thetechartguy.com\/post\/deep-learning-week1-and-week2\/",
+        "wordCount" : "713",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "coursera"
+
+    
+      
+        ,
+
+      
+      "deeplearning"
+
+    ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">The Tech Art Guy</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Bridging Art and Code</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/swapnil-revankar"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/swapnilrevankar"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://twitter.com/RevankarSr"
+            target="_blank"
+            rel="noopener me"
+            aria-label="twitter"
+            title="twitter"
+          >
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:swapnil_revankar2004@yahoo.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Swapnil Revankar
+        2025
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio/"
+              
+              title=""
+              >Portfolio</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      
+        <h1>From Math to Code: Logistic Regression in Neural Networks</h1>
+      
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  7/9/2025
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">4-minute read</span>
+          </li>
+        </ul>
+      <p>I’m currently taking <strong>Neural Networks and Deep Learning</strong> (part of the <a href="https://www.coursera.org/specializations/deep-learning">Deep Learning Specialization on Coursera</a>).<br>
+One of the first building blocks we meet is <strong>logistic regression</strong>.</p>
+<p>This post is part of my learning journal — my goal is to document the flow from <strong>math → code</strong> instead of re-explaining the theory.</p>
+<hr>
+<h2 id="preparing-the-data">Preparing the Data</h2>
+<p>Before training, images must be put into a format the algorithm understands.</p>
+<h3 id="1-dataset-dimensions">1) Dataset dimensions</h3>
+<p>When loaded, each image has 3 dimensions: height, width, and RGB channels.</p>
+<ul>
+<li><code>n_train</code> → number of training images</li>
+<li><code>n_test</code> → number of test images</li>
+<li>Each image: <code>img_size × img_size × 3</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">n_train</span>  <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">n_test</span>   <span class="o">=</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">img_size</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span></code></pre></div><p>Example: for 64×64 RGB images, each picture has <strong>64 × 64 × 3 = 12,288 numbers</strong>.</p>
+<hr>
+<h3 id="2-flattening">2) Flattening</h3>
+<p>Neural nets expect <strong>vectors, not cubes</strong>.<br>
+So we “unroll” each image into a column vector, with one column per image.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">X_train_flat</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n_train</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</span></span><span class="line"><span class="cl"><span class="n">X_test_flat</span>  <span class="o">=</span> <span class="n">X_test</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n_test</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</span></span></code></pre></div><ul>
+<li>Before: <code>(n_train, 64, 64, 3)</code></li>
+<li>After: <code>(12288, n_train)</code></li>
+</ul>
+<p>Think of taking a Rubik’s cube and stretching it into a line of numbers.</p>
+<hr>
+<h3 id="3-normalization">3) Normalization</h3>
+<p>Pixel values range from <code>0 → 255</code>. Scaling them to <code>[0, 1]</code> helps learning.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train_flat</span> <span class="o">/</span> <span class="mf">255.</span>
+</span></span><span class="line"><span class="cl"><span class="n">X_test</span>  <span class="o">=</span> <span class="n">X_test_flat</span>  <span class="o">/</span> <span class="mf">255.</span>
+</span></span></code></pre></div><p>At this point:</p>
+<ul>
+<li>Training set → <code>(12288, n_train)</code></li>
+<li>Test set → <code>(12288, n_test)</code></li>
+<li>Values between 0 and 1.</li>
+</ul>
+<hr>
+<h2 id="building-blocks-of-logistic-regression">Building Blocks of Logistic Regression</h2>
+<p>Now we construct the parts of the algorithm step by step.</p>
+<hr>
+<h3 id="parameters-w-b">Parameters <code>(w, b)</code></h3>
+<ul>
+<li><code>w</code> = weights (how important each pixel is)</li>
+<li><code>b</code> = bias (a constant offset)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">dim</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">dim</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">b</span> <span class="o">=</span> <span class="mf">0.0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span>
+</span></span></code></pre></div><p>Here, <code>dim = number of features</code> (e.g., 12,288 for 64×64×3).</p>
+<hr>
+<h3 id="activation-sigmoid">Activation: Sigmoid</h3>
+<p><strong>Math</strong></p>
+<p>$$
+\sigma(z) = \frac{1}{1 + e^{-z}}, \quad z = w^\top X + b
+$$</p>
+<p><strong>Code</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">z</span><span class="p">))</span>
+</span></span></code></pre></div><hr>
+<h3 id="cost-and-gradients">Cost and Gradients</h3>
+<p>We measure how far predictions are from labels and compute gradients for updates.</p>
+<p><strong>Math</strong></p>
+<ul>
+<li>Prediction: ( A = \sigma(w^\top X + b) )</li>
+<li>Cost:
+$$
+J = -\frac{1}{m} \sum_{i=1}^m \Big[y^{(i)} \log A^{(i)} + (1-y^{(i)}) \log(1-A^{(i)})\Big]
+$$</li>
+<li>Gradients:
+$$
+dw = \frac{1}{m} X (A - Y)^\top,\quad db = \frac{1}{m} \sum_{i=1}^m (A^{(i)} - y^{(i)})
+$$</li>
+</ul>
+<p><strong>Code</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">propagate</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">m</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl">    <span class="n">A</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># cost</span>
+</span></span><span class="line"><span class="cl">    <span class="n">eps</span> <span class="o">=</span> <span class="mf">1e-15</span>  <span class="c1"># avoid log(0)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cost</span> <span class="o">=</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">Y</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">eps</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="n">eps</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">                            <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">Y</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">A</span><span class="p">,</span> <span class="n">eps</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="n">eps</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># gradients</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dZ</span> <span class="o">=</span> <span class="n">A</span> <span class="o">-</span> <span class="n">Y</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dw</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dZ</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">db</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dZ</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">grads</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;dw&#34;</span><span class="p">:</span> <span class="n">dw</span><span class="p">,</span> <span class="s2">&#34;db&#34;</span><span class="p">:</span> <span class="n">db</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">grads</span><span class="p">,</span> <span class="n">cost</span>
+</span></span></code></pre></div><hr>
+<h3 id="gradient-descent">Gradient Descent</h3>
+<p>We repeatedly update <code>w</code> and <code>b</code>.</p>
+<p><strong>Math</strong></p>
+<p>$$
+w := w - \alpha , dw \newline
+b := b - \alpha , db
+$$</p>
+<p><strong>Code</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">optimize</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">num_iterations</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">print_cost</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">costs</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_iterations</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">grads</span><span class="p">,</span> <span class="n">cost</span> <span class="o">=</span> <span class="n">propagate</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">w</span> <span class="o">=</span> <span class="n">w</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">grads</span><span class="p">[</span><span class="s2">&#34;dw&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">grads</span><span class="p">[</span><span class="s2">&#34;db&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">costs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cost</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">print_cost</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Cost after iteration </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">cost</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;w&#34;</span><span class="p">:</span> <span class="n">w</span><span class="p">,</span> <span class="s2">&#34;b&#34;</span><span class="p">:</span> <span class="n">b</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">params</span><span class="p">,</span> <span class="n">grads</span><span class="p">,</span> <span class="n">costs</span>
+</span></span></code></pre></div><hr>
+<h3 id="prediction">Prediction</h3>
+<p>Turn probabilities into binary outputs.</p>
+<p><strong>Math</strong></p>
+<p>$$
+\hat{y}^{(i)} =
+\begin{cases}
+1 &amp; \text{if } A^{(i)} &gt; 0.5 \newline
+0 &amp; \text{otherwise}
+\end{cases}
+$$</p>
+<p><strong>Code</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">A</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="n">A</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</span></span></code></pre></div><hr>
+<h2 id="the-full-model">The Full Model</h2>
+<p>Now we merge everything into a single function.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">,</span> <span class="n">num_iterations</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">print_cost</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">n_x</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">w</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">initialize</span><span class="p">(</span><span class="n">n_x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">params</span><span class="p">,</span> <span class="n">grads</span><span class="p">,</span> <span class="n">costs</span> <span class="o">=</span> <span class="n">optimize</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">num_iterations</span><span class="o">=</span><span class="n">num_iterations</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">learning_rate</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">print_cost</span><span class="o">=</span><span class="n">print_cost</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">w</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s2">&#34;w&#34;</span><span class="p">],</span> <span class="n">params</span><span class="p">[</span><span class="s2">&#34;b&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">Y_pred_train</span> <span class="o">=</span> <span class="n">predict</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">X_train</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Y_pred_test</span>  <span class="o">=</span> <span class="n">predict</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">X_test</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">train_acc</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Y_pred_train</span> <span class="o">-</span> <span class="n">Y_train</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test_acc</span>  <span class="o">=</span> <span class="mi">100</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Y_pred_test</span>  <span class="o">-</span> <span class="n">Y_test</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;costs&#34;</span><span class="p">:</span> <span class="n">costs</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;train_accuracy&#34;</span><span class="p">:</span> <span class="n">train_acc</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;test_accuracy&#34;</span><span class="p">:</span>  <span class="n">test_acc</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;w&#34;</span><span class="p">:</span> <span class="n">w</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;b&#34;</span><span class="p">:</span> <span class="n">b</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;learning_rate&#34;</span><span class="p">:</span> <span class="n">learning_rate</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;num_iterations&#34;</span><span class="p">:</span> <span class="n">num_iterations</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Y_pred_train&#34;</span><span class="p">:</span> <span class="n">Y_pred_train</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Y_pred_test&#34;</span><span class="p">:</span>  <span class="n">Y_pred_test</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div><hr>
+<h2 id="visualizing-training-optional">Visualizing Training (Optional)</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">plot_cost</span><span class="p">(</span><span class="n">costs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">costs</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&#34;cost&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&#34;iterations (x100)&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&#34;Learning curve&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><hr>
+<h2 id="wrap-up">Wrap-up</h2>
+<p>We’ve gone from raw images to a working logistic regression classifier:</p>
+<ol>
+<li><strong>Preprocessing</strong>: flatten + normalize</li>
+<li><strong>Initialize</strong>: weights and bias</li>
+<li><strong>Forward + Cost + Backward</strong>: compute activations and gradients</li>
+<li><strong>Optimize</strong>: gradient descent</li>
+<li><strong>Predict</strong>: binary classification</li>
+</ol>
+<p>This forms the foundation for neural networks, where logistic regression units are stacked into layers.</p>
+
+
+
+<h3>Posts in this series</h3>
+<ul>
+  
+    <li><a href="/post/deep-learning-week1-and-week2/">From Math to Code: Logistic Regression in Neural Networks</a></li>
+  
+</ul>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="/tags/coursera/">coursera</a><a class="tag" href="/tags/deeplearning/">deeplearning</a></span>
+
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Swapnil Revankar
+        2025
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></body>
+</html>
