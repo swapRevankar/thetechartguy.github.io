@@ -6,7 +6,18 @@
     <description>Recent content in Posts on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechartguy.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechartguy.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Planar Data Classification with One Hidden Layer</title>
+      <link>https://thetechartguy.com/post/deep-learning-week3/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/post/deep-learning-week3/</guid>
+      
+        <description>&lt;p&gt;For Week 3 of the Deep Learning Specialization, we move beyond logistic regression and build our &lt;strong&gt;first neural network&lt;/strong&gt; — one with a single hidden layer. The task is to classify a toy &lt;strong&gt;flower-shaped dataset&lt;/strong&gt;, which logistic regression cannot handle well.&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>From Math to Code: Logistic Regression in Neural Networks</title>
       <link>https://thetechartguy.com/post/deep-learning-week1-and-week2/</link>
