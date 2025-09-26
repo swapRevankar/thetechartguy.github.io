@@ -6,7 +6,18 @@
     <description>Recent content in Neuralnetworks on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechartguy.com/tags/neuralnetworks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechartguy.com/tags/neuralnetworks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Deep Neural Networks</title>
+      <link>https://thetechartguy.com/post/deep-learning-week4/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/post/deep-learning-week4/</guid>
+      
+        <description>&lt;p&gt;In Week 2, we trained a &lt;strong&gt;logistic regression classifier&lt;/strong&gt; for the cat vs. non-cat dataset. It reached about &lt;strong&gt;70% test accuracy&lt;/strong&gt;, but logistic regression is fundamentally limited: it can only draw one linear boundary.&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Planar Data Classification with One Hidden Layer</title>
       <link>https://thetechartguy.com/post/deep-learning-week3/</link>
@@ -15,6 +26,18 @@
       <guid>https://thetechartguy.com/post/deep-learning-week3/</guid>
       
         <description>&lt;p&gt;For Week 3 of the Deep Learning Specialization, we move beyond logistic regression and build our &lt;strong&gt;first neural network&lt;/strong&gt; — one with a single hidden layer. The task is to classify a toy &lt;strong&gt;flower-shaped dataset&lt;/strong&gt;, which logistic regression cannot handle well.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Logistic Regression with a Neural Network Mindset</title>
+      <link>https://thetechartguy.com/post/deep-learning-week1-and-week2/</link>
+      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/post/deep-learning-week1-and-week2/</guid>
+      
+        <description>&lt;p&gt;I’m currently taking &lt;strong&gt;Neural Networks and Deep Learning&lt;/strong&gt; (part of the &lt;a href=&#34;https://www.coursera.org/specializations/deep-learning&#34;&gt;Deep Learning Specialization on Coursera&lt;/a&gt;).&lt;br&gt;
+One of the first building blocks we meet is &lt;strong&gt;logistic regression&lt;/strong&gt;.&lt;/p&gt;</description>
       
     </item>
     

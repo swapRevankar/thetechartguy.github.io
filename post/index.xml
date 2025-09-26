@@ -6,7 +6,18 @@
     <description>Recent content in Posts on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechartguy.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechartguy.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Deep Neural Networks</title>
+      <link>https://thetechartguy.com/post/deep-learning-week4/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechartguy.com/post/deep-learning-week4/</guid>
+      
+        <description>&lt;p&gt;In Week 2, we trained a &lt;strong&gt;logistic regression classifier&lt;/strong&gt; for the cat vs. non-cat dataset. It reached about &lt;strong&gt;70% test accuracy&lt;/strong&gt;, but logistic regression is fundamentally limited: it can only draw one linear boundary.&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Planar Data Classification with One Hidden Layer</title>
       <link>https://thetechartguy.com/post/deep-learning-week3/</link>
@@ -19,7 +30,7 @@
     </item>
     
     <item>
-      <title>From Math to Code: Logistic Regression in Neural Networks</title>
+      <title>Logistic Regression with a Neural Network Mindset</title>
       <link>https://thetechartguy.com/post/deep-learning-week1-and-week2/</link>
       <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
       
