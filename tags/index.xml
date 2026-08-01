@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My blog</title>
-    <link>https://thetechartguy.com/tags/</link>
+    <link>https://techartguy.com/tags/</link>
     <description>Recent content in Tags on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechartguy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://techartguy.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coursera</title>
-      <link>https://thetechartguy.com/tags/coursera/</link>
+      <link>https://techartguy.com/tags/coursera/</link>
       <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/coursera/</guid>
+      <guid>https://techartguy.com/tags/coursera/</guid>
       
         <description></description>
       
@@ -20,10 +20,10 @@
     
     <item>
       <title>Deeplearning</title>
-      <link>https://thetechartguy.com/tags/deeplearning/</link>
+      <link>https://techartguy.com/tags/deeplearning/</link>
       <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/deeplearning/</guid>
+      <guid>https://techartguy.com/tags/deeplearning/</guid>
       
         <description></description>
       
@@ -31,10 +31,10 @@
     
     <item>
       <title>Neuralnetworks</title>
-      <link>https://thetechartguy.com/tags/neuralnetworks/</link>
+      <link>https://techartguy.com/tags/neuralnetworks/</link>
       <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/neuralnetworks/</guid>
+      <guid>https://techartguy.com/tags/neuralnetworks/</guid>
       
         <description></description>
       
@@ -42,10 +42,10 @@
     
     <item>
       <title>Gamedev</title>
-      <link>https://thetechartguy.com/tags/gamedev/</link>
+      <link>https://techartguy.com/tags/gamedev/</link>
       <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/gamedev/</guid>
+      <guid>https://techartguy.com/tags/gamedev/</guid>
       
         <description></description>
       
@@ -53,10 +53,10 @@
     
     <item>
       <title>Machinelearning</title>
-      <link>https://thetechartguy.com/tags/machinelearning/</link>
+      <link>https://techartguy.com/tags/machinelearning/</link>
       <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/machinelearning/</guid>
+      <guid>https://techartguy.com/tags/machinelearning/</guid>
       
         <description></description>
       
@@ -64,10 +64,10 @@
     
     <item>
       <title>Perceptron</title>
-      <link>https://thetechartguy.com/tags/perceptron/</link>
+      <link>https://techartguy.com/tags/perceptron/</link>
       <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/perceptron/</guid>
+      <guid>https://techartguy.com/tags/perceptron/</guid>
       
         <description></description>
       
@@ -75,10 +75,10 @@
     
     <item>
       <title>Documentation</title>
-      <link>https://thetechartguy.com/tags/documentation/</link>
+      <link>https://techartguy.com/tags/documentation/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/documentation/</guid>
+      <guid>https://techartguy.com/tags/documentation/</guid>
       
         <description></description>
       
@@ -86,10 +86,10 @@
     
     <item>
       <title>Maya</title>
-      <link>https://thetechartguy.com/tags/maya/</link>
+      <link>https://techartguy.com/tags/maya/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/maya/</guid>
+      <guid>https://techartguy.com/tags/maya/</guid>
       
         <description></description>
       
@@ -97,10 +97,10 @@
     
     <item>
       <title>Python</title>
-      <link>https://thetechartguy.com/tags/python/</link>
+      <link>https://techartguy.com/tags/python/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/python/</guid>
+      <guid>https://techartguy.com/tags/python/</guid>
       
         <description></description>
       
@@ -108,10 +108,10 @@
     
     <item>
       <title>Scripting</title>
-      <link>https://thetechartguy.com/tags/scripting/</link>
+      <link>https://techartguy.com/tags/scripting/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/scripting/</guid>
+      <guid>https://techartguy.com/tags/scripting/</guid>
       
         <description></description>
       
@@ -119,10 +119,10 @@
     
     <item>
       <title>Tool</title>
-      <link>https://thetechartguy.com/tags/tool/</link>
+      <link>https://techartguy.com/tags/tool/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/tool/</guid>
+      <guid>https://techartguy.com/tags/tool/</guid>
       
         <description></description>
       
@@ -130,10 +130,10 @@
     
     <item>
       <title>Autocomplete</title>
-      <link>https://thetechartguy.com/tags/autocomplete/</link>
+      <link>https://techartguy.com/tags/autocomplete/</link>
       <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/autocomplete/</guid>
+      <guid>https://techartguy.com/tags/autocomplete/</guid>
       
         <description></description>
       
@@ -141,10 +141,10 @@
     
     <item>
       <title>Pycharm</title>
-      <link>https://thetechartguy.com/tags/pycharm/</link>
+      <link>https://techartguy.com/tags/pycharm/</link>
       <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/pycharm/</guid>
+      <guid>https://techartguy.com/tags/pycharm/</guid>
       
         <description></description>
       
@@ -152,10 +152,10 @@
     
     <item>
       <title>Mash</title>
-      <link>https://thetechartguy.com/tags/mash/</link>
+      <link>https://techartguy.com/tags/mash/</link>
       <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/mash/</guid>
+      <guid>https://techartguy.com/tags/mash/</guid>
       
         <description></description>
       
@@ -163,10 +163,10 @@
     
     <item>
       <title>Modelling</title>
-      <link>https://thetechartguy.com/tags/modelling/</link>
+      <link>https://techartguy.com/tags/modelling/</link>
       <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/modelling/</guid>
+      <guid>https://techartguy.com/tags/modelling/</guid>
       
         <description></description>
       
@@ -174,10 +174,10 @@
     
     <item>
       <title>Personal</title>
-      <link>https://thetechartguy.com/tags/personal/</link>
+      <link>https://techartguy.com/tags/personal/</link>
       <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://thetechartguy.com/tags/personal/</guid>
+      <guid>https://techartguy.com/tags/personal/</guid>
       
         <description></description>
       
